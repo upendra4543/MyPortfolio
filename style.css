@@ -103,9 +103,10 @@ li{
 /* drop down */
 .fa-solid{
     color: #ce1141;
-    font-size: 2.6rem;
+    font-size: 3rem;
     cursor: pointer;
     display: none;
+    margin-right: 2rem;
     
 }
 .drop-down-container{
@@ -116,7 +117,7 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 @media(max-width:768px){
     .fa-solid{
