@@ -11,7 +11,7 @@
 <body>
     <header class="main">
         <img src="image/fuull-stack-removebg-preview.png" alt="header logo" class="logo">
-        <nav>
+        <nav class="nav">
             <ul>
                 <a href="#"><li>Home</li></a>
                 <a href="#"><li>About</li></a>
@@ -19,11 +19,24 @@
                 <a href="#"><li>Contact</li></a>
                 <a href="#"><li>Services</li></a>
             </ul>
-            <div class="toggle-btn">
-                <input type="checkbox" id="dark-mode">
-                 <label for="dark-mode"></label>
-            </div>
         </nav>
+          <div class="d-togle">
+                <div class="toggle-btn">
+                        <input type="checkbox" id="dark-mode">
+                        <label for="dark-mode"></label>
+                    </div>
+                <div class="drop-down-container">
+                        <ul class="drop-down">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="project.html">Skills</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Services</a></li>
+                        </ul>
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+                    
+              </div>    
         </header>
         
         <!-- hero section start -->
@@ -268,5 +281,6 @@
     <script>
         AOS.init();
       </script>
+      <script src="index.js"></script>
 </body>
 </html>
