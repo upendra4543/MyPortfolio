@@ -270,14 +270,44 @@ input{
 }
 .about-text{
       text-align: start;
-      padding: 6rem;
+      padding:2rem;
       margin-top: 3rem;
+      max-width: 60%;
 }
+.col-about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media(min-width:360px) and (max-width:640px){
+  .about-text{
+      text-align: start;
+      padding: 2rem;
+      margin-top: 3rem;
+       max-width: 100%;
+  }
+  .col-about{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media(max-width:360px){
     .about-text{
         padding: 0rem;
       margin-top: 3rem;
     }
+    .col-about{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+      padding: 1rem
+  }
+    
 }
 .social b{
     color: #c47d7d;
@@ -289,11 +319,17 @@ input{
     letter-spacing: .8px;
     
 }
+.about-image{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .about-image img{
     
-    width:40rem ;
-    height: 50rem;
+   width: 25rem;
+    height: 40rem;
     border-radius: 11px;
+    
 }
 @media(max-width:360px){
     .about-image img{
@@ -301,13 +337,7 @@ input{
         margin-top: 1rem;
     }
 }
-@media(max-width:768px){
-    .about-image img{
-        width: 25rem;
-        height: 40rem;
-        margin-top: 8rem;
-    }
-}
+
 
 .btn-2{
     display: inline-block;
@@ -408,6 +438,13 @@ background-color: #b3ffec;
     margin-top: 3rem;
     margin-bottom: 4rem;
   }
+  @media(min-width:360px) and (max-width:640px){
+      .certification-cards {
+      display: flex;
+      justify-content: center;
+       flex-wrap: wrap;
+    }
+  }
   @media(max-width:360px){
     .certification-cards{
         display: grid;
@@ -472,24 +509,28 @@ background-color: #b3ffec;
 
     
   }
-  @media(min-width:360px) and (max-width:640px){
+ @media(min-width:360px) and (max-width:640px){
     .project-container{
         padding: 1rem;
-        grid-template-columns: repeat(2 ,1fr);
+         grid-template-columns: repeat(2 ,1fr); 
     }
 
+  } 
+  @media(min-width:640px) and (max-width:1000px){
+          .project-container{
+            grid-template-columns: repeat(2 ,1fr)
+          }
   }
 
-  @media(max-width:768px){
+   
+  
+  @media(max-width:500px){
     .project-container{
-        padding: 2rem;
-    }
-  }
-  @media(max-width:360px){
-    .project-container{
-        padding: 6rem;
+        
         grid-template-columns: repeat(1 ,1fr);
+        place-items: center;
     }
+    
   }
   .project-cards{
     display: flex;
