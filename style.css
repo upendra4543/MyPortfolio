@@ -47,6 +47,7 @@ a button{
     align-items: center;
     padding: 1.6rem 6rem;
     background-color: #002633;
+    border-bottom: 1px solid green;
 
 }
 @media(max-width:360px){
