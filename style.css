@@ -440,6 +440,7 @@ background-color: #b3ffec;
   .certification-cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1.2rem;
     margin-top: 3rem;
     margin-bottom: 4rem;
@@ -490,7 +491,13 @@ background-color: #b3ffec;
     color: #fff;
     border-radius: 100px;
     text-decoration: none;
+    
+  }
+  .b-4{
     margin-top: 30%;
+  }
+  .b-5{
+    margin-top: 20%;
   }
   .btn-3:hover{
     background-color: #00cccc;
