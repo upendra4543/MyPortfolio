@@ -185,6 +185,7 @@ input{
 .btn-1{
     margin-right: 3rem;
     font-size: 1.6rem;
+    text-align: center;
 }
 .hero-image img{
     width: 100%;
