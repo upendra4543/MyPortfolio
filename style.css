@@ -296,7 +296,7 @@ input{
         .hero-intro{
             padding: 1.4rem;
         }
-    
+
 }
 .hero-image img:hover{
     transform: translate(-5%,-5%);
@@ -374,7 +374,6 @@ input{
     margin-top: 1rem;
   }
 }
-
 @media(max-width:360px){
     .about-text{
         padding: 0rem;
@@ -386,8 +385,7 @@ input{
     justify-content: center;
     align-items: center;
       padding: 1rem
-  }
-    
+  }  
 }
 .social b{
     color: #c47d7d;
@@ -396,8 +394,7 @@ input{
     font-size: 1.6rem;
     color: #0f0808;
     line-height: 1.5;
-    letter-spacing: .8px;
-    
+    letter-spacing: .8px;  
 }
 .about-image{
   display: flex;
@@ -408,8 +405,7 @@ input{
     
    width: 25rem;
     height: 40rem;
-    border-radius: 11px;
-    
+    border-radius: 11px;  
 }
 @media(max-width:360px){
     .about-image img{
@@ -417,17 +413,12 @@ input{
         margin-top: 1rem;
     }
 }
-
-
 .btn-2{
     display: inline-block;
     margin-top: 2.5rem;
     text-decoration: none;
     font-size: 1.6rem;
 }
-
-
-
 
 /* skill section star */
 .skills-section{
@@ -647,6 +638,9 @@ background-color: #b3ffec;
   }
   .btn-4{
     margin-top:2rem ;
+  }
+  #btn-5{
+    margin-top: -8px;
   }
   /* secton contact */
  .form{
