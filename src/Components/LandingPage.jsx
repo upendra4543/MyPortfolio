@@ -407,7 +407,16 @@ export default function LandingPage() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed italic">
-                    "Upendra Shriwastava designed and developed our official school website <strong className="text-white font-semibold">kinderstarsconventschool.in</strong>. The platform is extremely smooth, professional, and has made managing student records and school notices effortless for us in Deoria!"
+                    "Upendra Shriwastava designed and developed our official school website{' '}
+                    <a 
+                      href="https://kinderstarsconventschool.in/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-white font-semibold hover:text-blue-400 hover:underline transition-all"
+                    >
+                      kinderstarsconventschool.in
+                    </a>
+                    . The platform is extremely smooth, professional, and has made managing student records and school notices effortless for us in Deoria!"
                   </p>
                 </div>
 
@@ -597,8 +606,17 @@ export default function LandingPage() {
             {/* Col 4 */}
             <div>
               <h4 className="text-white font-semibold text-xs tracking-wider uppercase mb-4">Client Project</h4>
-              <p className="text-xs text-slate-500 mb-3">Proudly powering <span className="text-blue-400 font-semibold">kinderstarsconventschool.in</span></p>
-              <a href="#contact" className="block text-center py-2.5 px-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition">
+                  <p className="text-xs text-slate-500 mb-3">
+                    Proudly powering{' '}
+                    <a 
+                      href="https://kinderstarsconventschool.in/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 font-semibold hover:underline transition-all"
+                    >
+                      kinderstarsconventschool.in
+                    </a>
+                  </p>              <a href="#contact" className="block text-center py-2.5 px-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition">
                 Inquire Now
               </a>
             </div>
