@@ -6,7 +6,7 @@ export default function LandingPage() {
   const [activeTab, setActiveTab] = useState('school');
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '', service: 'school', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', service: 'School Management ERP', message: '' });
 
   // EmailJS Form Submission Handler
   const handleSubmit = (e) => {
@@ -15,12 +15,11 @@ export default function LandingPage() {
 
     setLoading(true);
 
-    // EmailJS Keys (YAHAN APNI KEYS BHAREIN)
-    const SERVICE_ID = "service_4ceim9g";     // e.g. "service_abc123"
-    const TEMPLATE_ID = "template_pu5axsg";   // e.g. "template_xyz789"
-    const PUBLIC_KEY = "J6JWtrx-BNjVIKo6P";     // e.g. "user_123456789"
+    // EmailJS Keys (Yahan apni actual keys bharein)
+    const SERVICE_ID = "service_4ceim9g"; // e.g. "service_abc123"
+    const TEMPLATE_ID = "template_pu5axsg"; // e.g. "template_xyz789"
+    const PUBLIC_KEY = "J6JWtrx-BNjVIKo6P";     
 
-    // EmailJS Variables (Match with {{name}}, {{email}}, {{service}}, {{message}})
     const templateParams = {
       name: formData.name,
       email: formData.email,
@@ -30,10 +29,9 @@ export default function LandingPage() {
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
         setLoading(false);
         setFormSubmitted(true);
-        setFormData({ name: '', email: '', service: 'school', message: '' });
+        setFormData({ name: '', email: '', service: 'School Management ERP', message: '' });
 
         setTimeout(() => {
           setFormSubmitted(false);
@@ -57,15 +55,15 @@ export default function LandingPage() {
           <a href="#" className="flex items-center gap-3 group">
             <img 
               src="/upenlogo.png" 
-              alt="Upen Logo" 
-              className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+              alt="UPEN Logo" 
+              className="h-11 w-auto object-contain transition-transform group-hover:scale-105"
             />
             <div className="flex flex-col">
               <span className="text-xl font-black tracking-wider bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent">
                 UPEN
               </span>
               <span className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase">
-                Web & School Solutions
+                Deoria & Gorakhpur
               </span>
             </div>
           </a>
@@ -137,15 +135,15 @@ export default function LandingPage() {
             
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-950/60 border border-blue-800/50 text-blue-400 text-xs sm:text-sm font-medium mb-8 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-              Full-Stack Developer & Mathematics Educator
+              Deoria & Gorakhpur’s Trusted Web & App Developer
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.15]">
-              Building Modern Web Apps & <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent">School Management Portals</span>
+              Website, Mobile App & <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent">School ERP Solutions</span>
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
-              Empowering schools like Kinder Stars Convent School with automated ERP solutions, while crafting high-performance full-stack custom business applications.
+              देवरिया और गोरखपुर में बेस्ट वेबसाइट, मोबाइल ऐप और स्कूल मैनेजमेंट सॉफ्टवेयर बनवाएं। Empowering schools like Kinder Stars Convent School with advanced automated portals.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -174,12 +172,12 @@ export default function LandingPage() {
                 <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">School Portals</p>
               </div>
               <div>
-                <p className="text-3xl font-extrabold text-indigo-400">24/7</p>
-                <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Reliable Support</p>
+                <p className="text-3xl font-extrabold text-indigo-400">Local</p>
+                <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Deoria & Gorakhpur</p>
               </div>
               <div>
                 <p className="text-3xl font-extrabold text-cyan-400">MERN</p>
-                <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Stack Expertise</p>
+                <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Stack & Mobile Apps</p>
               </div>
             </div>
 
@@ -216,20 +214,20 @@ export default function LandingPage() {
                 <div>
                   <h2 className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2">About Me</h2>
                   <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-                    Educator, Developer & Tech Architect
+                    Educator, Developer & Tech Architect in Deoria
                   </h3>
                 </div>
                 <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                   Hello! I am <strong className="text-white">Upendra Shriwastava</strong>. I work passionately as a Class 10 NCERT Mathematics teacher, helping students master geometry and analytical problem-solving.
                 </p>
                 <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
-                  Alongside teaching, I am an active full-stack web developer building practical software platforms for schools and businesses. I specialize in designing and deploying custom websites like <code className="text-blue-400 font-mono">kinderstarsconventschool.in</code>, complete with database management, fee trackers, admit card generators, and SEO optimization.
+                  Based in Uttar Pradesh, I provide top-tier web development, mobile app creation, and school management software services across <strong className="text-white">Deoria and Gorakhpur</strong>. I specialize in building custom portals like <code className="text-blue-400 font-mono">kinderstarsconventschool.in</code> with automated fee tracking, admit cards, and high SEO rankings.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
                   <div>
                     <p className="text-sm font-bold text-white">📍 Location</p>
-                    <p className="text-xs text-slate-400 mt-1">India</p>
+                    <p className="text-xs text-slate-400 mt-1">Deoria & Gorakhpur, UP</p>
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">✉️ Email</p>
@@ -251,48 +249,42 @@ export default function LandingPage() {
                 My Skills & Tech Stack
               </h3>
               <p className="mt-4 text-slate-400 text-base">
-                Equipped with modern frontend frameworks, backend engines, and database systems to build scalable applications.
+                Equipped with modern frontend frameworks, backend engines, and database systems to build scalable web and mobile apps.
               </p>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
               
-              {/* HTML */}
               <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition text-center group">
                 <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🌐</div>
                 <h4 className="text-white font-bold text-base">HTML5</h4>
                 <p className="text-xs text-slate-400 mt-1">Semantic & Accessible</p>
               </div>
 
-              {/* CSS / Tailwind */}
               <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition text-center group">
                 <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🎨</div>
                 <h4 className="text-white font-bold text-base">CSS & Tailwind</h4>
                 <p className="text-xs text-slate-400 mt-1">Modern Styling</p>
               </div>
 
-              {/* JavaScript */}
               <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition text-center group">
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">⚡</div>
-                <h4 className="text-white font-bold text-base">JavaScript</h4>
-                <p className="text-xs text-slate-400 mt-1">ES6+ & Logic</p>
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📱</div>
+                <h4 className="text-white font-bold text-base">Mobile Apps</h4>
+                <p className="text-xs text-slate-400 mt-1">Responsive Design</p>
               </div>
 
-              {/* React */}
               <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition text-center group">
                 <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">⚛️</div>
                 <h4 className="text-white font-bold text-base">React.js</h4>
                 <p className="text-xs text-slate-400 mt-1">Vite & Components</p>
               </div>
 
-              {/* Node.js & Express */}
               <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition text-center group">
                 <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🚀</div>
                 <h4 className="text-white font-bold text-base">Node & Express</h4>
                 <p className="text-xs text-slate-400 mt-1">Backend APIs</p>
               </div>
 
-              {/* MongoDB */}
               <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition text-center group">
                 <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🍃</div>
                 <h4 className="text-white font-bold text-base">MongoDB</h4>
@@ -310,10 +302,10 @@ export default function LandingPage() {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Our Offerings</h2>
               <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-                Tailored Solutions for Education & Enterprise
+                Tailored Solutions for Education & Business in Deoria & Gorakhpur
               </h3>
               <p className="mt-4 text-slate-400 text-base">
-                Whether you run an academic institution or a growing commercial business, we build robust digital ecosystems.
+                Whether you need a school ERP software, a custom website, or a mobile app, we deliver excellence.
               </p>
 
               {/* Tabs Toggle */}
@@ -336,7 +328,7 @@ export default function LandingPage() {
                       : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  💼 Custom Business Portals
+                  📱 Web & Mobile App Dev
                 </button>
               </div>
             </div>
@@ -348,7 +340,7 @@ export default function LandingPage() {
                   <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-6">🎓</div>
                   <h4 className="text-xl font-bold text-white mb-2">Student Records & Admission</h4>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Digital student database, admission workflows, class assignment, and automated registration management.
+                    Digital student database, admission workflows, class assignment, and automated registration management for schools in Deoria.
                   </p>
                 </div>
                 <div className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition">
@@ -369,24 +361,24 @@ export default function LandingPage() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-6">💻</div>
-                  <h4 className="text-xl font-bold text-white mb-2">Custom Business Web Portals</h4>
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-6">🌐</div>
+                  <h4 className="text-xl font-bold text-white mb-2">Website Development</h4>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    High-performance React & Tailwind web apps crafted specifically for your brand identity and workflow.
+                    High-performance business and school websites built with React & Tailwind, custom-tailored for local enterprises in Gorakhpur and Deoria.
                   </p>
                 </div>
                 <div className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition">
-                  <div className="w-12 h-12 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-2xl mb-6">⚙️</div>
-                  <h4 className="text-xl font-bold text-white mb-2">Admin Dashboards & Management</h4>
+                  <div className="w-12 h-12 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-2xl mb-6">📱</div>
+                  <h4 className="text-xl font-bold text-white mb-2">Mobile App Development</h4>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Secure backend integration, inventory control panels, user authentication, and real-time data tracking.
+                    Custom mobile application development to take your business or educational institution straight to customers' smartphones.
                   </p>
                 </div>
                 <div className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition">
-                  <div className="w-12 h-12 rounded-xl bg-cyan-600/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl mb-6">🌐</div>
-                  <h4 className="text-xl font-bold text-white mb-2">Domain & SEO Optimization</h4>
+                  <div className="w-12 h-12 rounded-xl bg-cyan-600/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl mb-6">⚙️</div>
+                  <h4 className="text-xl font-bold text-white mb-2">Domain & Local SEO</h4>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    GoDaddy custom domain mapping, Google Search Console sitemaps, Open Graph tags, and blazing fast hosting.
+                    Custom domain setup, Google Search Console optimization, and local SEO to rank #1 in Deoria and Gorakhpur searches.
                   </p>
                 </div>
               </div>
@@ -401,31 +393,26 @@ export default function LandingPage() {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Customer Satisfaction</h2>
               <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-                Trusted by School Principals & Clients
+                Trusted by School Principals & Local Clients
               </h3>
               <p className="mt-4 text-slate-400 text-base">
-                Hear what our clients have to say about our web solutions and school management platforms.
+                Hear what our clients have to say about our web solutions and software platforms.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               
-              {/* Testimonial 1 */}
               <div className="p-8 rounded-3xl bg-slate-900 border border-slate-800 flex flex-col justify-between relative shadow-xl">
                 <div className="absolute top-6 right-8 text-blue-500/20 text-6xl font-serif">“</div>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-1 text-amber-400 text-sm">
-                    ★★★★★
-                  </div>
+                  <div className="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed italic">
-                    "Upendra Shriwastava designed and developed our official school website <strong className="text-white font-semibold">kinderstarsconventschool.in</strong>. The platform is extremely smooth, professional, and has made managing student records and school notices effortless for us. Outstanding customer satisfaction!"
+                    "Upendra Shriwastava designed and developed our official school website <strong className="text-white font-semibold">kinderstarsconventschool.in</strong>. The platform is extremely smooth, professional, and has made managing student records and school notices effortless for us in Deoria!"
                   </p>
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-slate-800 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-600/20 text-blue-400 font-bold flex items-center justify-center text-lg">
-                    DP
-                  </div>
+                  <div className="w-12 h-12 rounded-full bg-blue-600/20 text-blue-400 font-bold flex items-center justify-center text-lg">DP</div>
                   <div>
                     <h4 className="text-white font-bold text-sm">Dhirendra Prajapati</h4>
                     <p className="text-xs text-blue-400 font-medium">Principal, Kinder Stars Convent School</p>
@@ -433,25 +420,20 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* Testimonial 2 */}
               <div className="p-8 rounded-3xl bg-slate-900 border border-slate-800 flex flex-col justify-between relative shadow-xl">
                 <div className="absolute top-6 right-8 text-blue-500/20 text-6xl font-serif">“</div>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-1 text-amber-400 text-sm">
-                    ★★★★★
-                  </div>
+                  <div className="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed italic">
-                    "Working with Upendra was a seamless experience. He understood our custom business portal requirements precisely and delivered a lightning-fast React application with complete domain setup and clean code."
+                    "Best website and app developer in the Gorakhpur and Deoria region! Upendra delivered our custom web portal on time with exceptional quality and responsiveness."
                   </p>
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-slate-800 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-indigo-600/20 text-indigo-400 font-bold flex items-center justify-center text-lg">
-                    US
-                  </div>
+                  <div className="w-12 h-12 rounded-full bg-indigo-600/20 text-indigo-400 font-bold flex items-center justify-center text-lg">US</div>
                   <div>
-                    <h4 className="text-white font-bold text-sm">Satisfied Enterprise Client</h4>
-                    <p className="text-xs text-indigo-400 font-medium">Custom Web Portal Owner</p>
+                    <h4 className="text-white font-bold text-sm">Satisfied Local Client</h4>
+                    <p className="text-xs text-indigo-400 font-medium">Business Portal Owner</p>
                   </div>
                 </div>
               </div>
@@ -468,10 +450,10 @@ export default function LandingPage() {
               <div>
                 <h2 className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Get in Touch</h2>
                 <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-                  Let's Build Your Next Project Together
+                  Let's Build Your Website or App in Deoria & Gorakhpur
                 </h3>
                 <p className="mt-4 text-slate-400 text-base leading-relaxed">
-                  Have questions about school management systems or need a custom web portal for your business? Reach out directly using the details below or send a message.
+                  Have questions about school management systems, website development, or mobile apps? Reach out directly using the details below or send a message.
                 </p>
 
                 <div className="mt-8 space-y-6">
@@ -536,8 +518,8 @@ export default function LandingPage() {
                       className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-blue-500 text-sm"
                     >
                       <option value="School Management ERP">School Management ERP</option>
-                      <option value="Custom Business Portal">Custom Business Portal</option>
-                      <option value="Full-Stack Web Development">Full-Stack Web Development</option>
+                      <option value="Website Development">Website Development</option>
+                      <option value="Mobile App Development">Mobile App Development</option>
                       <option value="Domain & SEO Setup">Domain & SEO Setup</option>
                     </select>
                   </div>
@@ -580,14 +562,14 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             
-            {/* Col 1 */}
+            {/* Col 1 - Logo & About */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <img src="/upenlogo.png" alt="Logo" className="h-8 w-auto object-contain" />
+                <img src="/upenlogo.png" alt="UPEN Logo" className="h-9 w-auto object-contain" />
                 <span className="text-lg font-black text-white tracking-wider">UPEN</span>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed">
-                High-performance School ERP & Custom Business Web Applications built with React, Node, Express & MongoDB.
+                Top Web, Mobile App & School ERP development serving Deoria & Gorakhpur.
               </p>
             </div>
 
@@ -596,9 +578,9 @@ export default function LandingPage() {
               <h4 className="text-white font-semibold text-xs tracking-wider uppercase mb-4">Services</h4>
               <ul className="space-y-2 text-xs">
                 <li><a href="#services" className="hover:text-blue-400 transition">School ERP Portal</a></li>
-                <li><a href="#services" className="hover:text-blue-400 transition">Custom Business Apps</a></li>
-                <li><a href="#services" className="hover:text-blue-400 transition">Admit Card & Result Engine</a></li>
-                <li><a href="#services" className="hover:text-blue-400 transition">Domain & SEO Setup</a></li>
+                <li><a href="#services" className="hover:text-blue-400 transition">Website Development</a></li>
+                <li><a href="#services" className="hover:text-blue-400 transition">Mobile App Development</a></li>
+                <li><a href="#services" className="hover:text-blue-400 transition">Deoria & Gorakhpur SEO</a></li>
               </ul>
             </div>
 
@@ -608,7 +590,7 @@ export default function LandingPage() {
               <ul className="space-y-2 text-xs">
                 <li><a href="tel:9984078746" className="hover:text-blue-400 transition">📞 +91 9984078746</a></li>
                 <li><a href="mailto:upendrashriwastava@gmail.com" className="hover:text-blue-400 transition">✉️ upendrashriwastava@gmail.com</a></li>
-                <li className="text-slate-500">📍 India</li>
+                <li className="text-slate-500">📍 Deoria & Gorakhpur, UP</li>
               </ul>
             </div>
 
@@ -624,7 +606,7 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-4">
-            <p>© {new Date().getFullYear()} UPEN Solutions. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} UPEN Solutions. Deoria & Gorakhpur. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-slate-400 transition">Privacy Policy</a>
               <a href="#" className="hover:text-slate-400 transition">Terms of Service</a>
